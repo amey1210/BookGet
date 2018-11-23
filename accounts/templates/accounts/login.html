@@ -1,0 +1,37 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div id="login-block">
+    <div id="login">
+        <!--<h2 class="text-center text-white pt-5">Login</h2>-->
+        <div class="continer">
+            <div id="login-row" class="row  align-items-center">
+                <div id="login-column">
+                    <div id="login-box" >
+                        <form id="login-form" class="container" name="LoginForm" action="#" method="post">
+                            {% csrf_token %}
+                            <h3 class="text-center text-info">Login</h3>
+	                        <div class="form-group">
+                                <label class="text-info" for="email">Email:</label><br>
+                                <input type="text" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="control-group">
+                                <label class="text-info" for="password">Password:</label><br>
+                                <input type="password" name="password" id="password" class="form-control" required>
+                            </div>
+                            <div id="reigister-link" class="text-right">
+                                <a class="text-info" href="/account/register/">Register here?</a><br>
+                            </div>
+                            <div class="from-group">
+                                <input type="submit" class="btn btn-info btn-md" value="Login">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
